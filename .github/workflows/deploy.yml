@@ -17,7 +17,7 @@ jobs:
           username: ec2-user
           key: ${{ secrets.EC2_KEY }}
           script: |
-            cd /home/ec2-user/Bibhuti_Test2026
+            cd /Bibhuti_Test2026
             git pull origin main
             pkill -f gunicorn || true
             nohup gunicorn -w 2 -b 0.0.0.0:5000 app:app > gunicorn.log 2>&1 &
